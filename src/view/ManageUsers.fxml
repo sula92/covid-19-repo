@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancUser" prefHeight="857.0" prefWidth="1165.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageUsersController">
+   <children>
+      <AnchorPane prefHeight="857.0" prefWidth="345.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <JFXTextField fx:id="txtnm" layoutX="25.0" layoutY="118.0" prefHeight="29.0" prefWidth="295.0" promptText="Name">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtcont" layoutX="25.0" layoutY="200.0" prefHeight="29.0" prefWidth="295.0" promptText="Contact No">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtemail" layoutX="25.0" layoutY="283.0" prefHeight="29.0" prefWidth="295.0" promptText="Email">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtunm" layoutX="25.0" layoutY="378.0" prefHeight="29.0" prefWidth="295.0" promptText="UserName">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtpwd" layoutX="25.0" layoutY="476.0" prefHeight="29.0" prefWidth="295.0" promptText="Password">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXComboBox fx:id="txtwork" layoutX="20.0" layoutY="652.0" prefHeight="31.0" prefWidth="302.0" promptText="Working For" />
+            <JFXComboBox fx:id="txtrole" layoutX="25.0" layoutY="560.0" prefHeight="31.0" prefWidth="295.0" promptText="User Role" />
+            <Button fx:id="btnSave" layoutX="94.0" layoutY="746.0" mnemonicParsing="false" onAction="#btnSaveonAction" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: blue;" text="Save" textFill="#ebe5e5">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAdd" layoutX="100.0" layoutY="40.0" mnemonicParsing="false" onAction="#btnAddonAction" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: red;" text="New User+" textFill="#eee9e9">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblUser" layoutX="358.0" layoutY="360.0" prefHeight="472.0" prefWidth="787.0">
+        <columns>
+          <TableColumn fx:id="colunm" prefWidth="184.0" text="User Name" />
+          <TableColumn fx:id="colnm" prefWidth="259.0" text="Name" />
+            <TableColumn fx:id="colrole" prefWidth="176.0" text="Role" />
+            <TableColumn fx:id="coldel" prefWidth="167.0" text="Delete" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtsear" layoutX="370.0" layoutY="244.0" prefHeight="29.0" prefWidth="728.0" promptText="Search User" />
+      <Label layoutX="549.0" layoutY="41.0" prefHeight="49.0" prefWidth="248.0" text="Managae Users">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="iconHome" glyphName="HOME" layoutX="1089.0" layoutY="65.0" onMouseClicked="#homeOnClicked" size="60" />
+   </children>
+</AnchorPane>

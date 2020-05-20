@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="fontawesomefx-8.9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/libs/fontawesomefx-8.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/jfoenix-1.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/libs/mysql-connector-java-8.0.17.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboard" prefHeight="842.0" prefWidth="1217.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <children>
+      <ImageView fx:id="imgViewGlobalCovid" fitHeight="252.0" fitWidth="227.0" layoutX="88.0" layoutY="320.0" onMouseClicked="#navigate" onMouseEntered="#img_mouseEnterence" onMouseExited="#img_mouseExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/global.jpg" />
+         </image></ImageView>
+      <ImageView fx:id="imgViewHospital" fitHeight="179.0" fitWidth="355.0" layoutX="478.0" layoutY="14.0" onMouseClicked="#navigate" onMouseEntered="#img_mouseEnterence" onMouseExited="#img_mouseExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/hospital.jpg" />
+         </image></ImageView>
+      <ImageView fx:id="imgViewQuarantine" fitHeight="170.0" fitWidth="353.0" layoutX="506.0" layoutY="604.0" onMouseClicked="#navigate" onMouseEntered="#img_mouseEnterence" onMouseExited="#img_mouseExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/qc.jpg" />
+         </image></ImageView>
+      <ImageView fx:id="imgViewUser" fitHeight="158.0" fitWidth="256.0" layoutX="875.0" layoutY="326.0" onMouseClicked="#navigate" onMouseEntered="#img_mouseEnterence" onMouseExited="#img_mouseExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/user.jpg" />
+         </image></ImageView>
+      <FontAwesomeIconView fill="#fcfafa" glyphName="USER_PLUS" layoutX="496.0" layoutY="501.0" size="270" />
+      <Label layoutX="551.0" layoutY="225.0" text="Manage Hospitals" textFill="#f8f5f5">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="515.0" text="Manage Global Data" textFill="#fffafa">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="957.0" layoutY="514.0" text="Manage Users" textFill="#fcf8f8">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="522.0" layoutY="794.0" text="Manage Quarantine Centers" textFill="#fffafa">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" layoutX="490.0" layoutY="427.0" prefHeight="31.0" prefWidth="369.0" textFill="#0c98ee">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
