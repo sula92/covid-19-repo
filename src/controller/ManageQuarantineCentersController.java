@@ -132,6 +132,8 @@ public class ManageQuarantineCentersController implements Initializable {
                 txtDireCont.setText(qc.gethead().getContact());
                 txtHosCont1.setText(qc.getCotact1());
                 txtHosCont2.setText(qc.getContact2());
+                txtCity.setText(qc.getCity());
+                txtDis.setValue(qc.getDistrict());
 
             }
         });
@@ -142,6 +144,9 @@ public class ManageQuarantineCentersController implements Initializable {
     public void btnAddOnAc(ActionEvent event) {
 
         btnDel.setDisable(true);
+        btnSave.setText("Save");
+
+        reset();
 
 
         try {
@@ -172,7 +177,6 @@ public class ManageQuarantineCentersController implements Initializable {
             e.printStackTrace();
         }
 
-        reset();
 
     }
 
@@ -221,6 +225,7 @@ public class ManageQuarantineCentersController implements Initializable {
                 }
                 else {
                     new Alert(Alert.AlertType.INFORMATION,"Record Added Successfully").show();
+                    listHos.getItems().clear();
                     loadQc();
                 }
 
@@ -247,6 +252,7 @@ public class ManageQuarantineCentersController implements Initializable {
                 }
                 else {
                     new Alert(Alert.AlertType.INFORMATION,"Updated Successfully").show();
+                    listHos.getItems().clear();
                     loadQc();
                 }
             } catch (SQLException e) {
@@ -269,6 +275,7 @@ public class ManageQuarantineCentersController implements Initializable {
             }
             else {
                 new Alert(Alert.AlertType.INFORMATION,"Record Deleted Successfully").show();
+                listHos.getItems().clear();
                 loadQc();
             }
         } catch (SQLException e) {
@@ -354,11 +361,13 @@ public class ManageQuarantineCentersController implements Initializable {
         //txtDireCont.setText("");
         txtHosCont1.setText("");
         txtDireCont.setText("");
+        txtCapa.setText("");
 
         txtHosCont2.setText("");
         txtNm.setText("");
         txtId.setText("");
         txtCity.setText("");
+        txtDis.setValue(null);
 
         txtCapa.setPromptText("Capacity");
         txtDire.setPromptText("Head");

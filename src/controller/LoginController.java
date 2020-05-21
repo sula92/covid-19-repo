@@ -68,6 +68,7 @@ public class LoginController {
                 stage.setScene(scene);
                 stage.setTitle("Admin");
                 stage.setFullScreen(false);
+                break;
 
             case "Hospital-IT":
                 URL url2=this.getClass().getResource("/view/ManageHospital.fxml");
@@ -77,6 +78,7 @@ public class LoginController {
                 stage2.setScene(scene2);
                 stage2.setTitle("Hospital-IT");
                 stage2.setFullScreen(false);
+                break;
             case "Quarantine_Center_IT":
                 URL url3=this.getClass().getResource("/view/ManageQuarantineCenters.fxml");
                 Parent parent3= FXMLLoader.load(url3);
@@ -85,6 +87,7 @@ public class LoginController {
                 stage3.setScene(scene3);
                 stage3.setTitle("Quarantine_Center-IT");
                 stage3.setFullScreen(false);
+                break;
             case "PSTF":
                 URL url4=this.getClass().getResource("/view/Dashboard.fxml");
                 Parent parent4= FXMLLoader.load(url4);

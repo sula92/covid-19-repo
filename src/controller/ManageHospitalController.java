@@ -128,13 +128,14 @@ public class ManageHospitalController implements Initializable {
                Hospital hospital=getHospital(hosnm);
                txtId.setText(hospital.getId());
                txtNm.setText(hospital.getName());
-               txtDis.setValue(hospital.getCity());
+               txtDis.setValue(hospital.getDistrict());
                txtCapa.setText(hospital.getCapacity());
                txtDire.setText(hospital.getDirector().getName());
                txtDireCont.setText(hospital.getDirector().getContact());
                txtHosCont1.setText(hospital.getCotact1());
                txtHosCont2.setText(hospital.getContact2());
                txtFax.setText(hospital.getFax());
+               txtCity.setText(hospital.getCity());
                txtEmail.setText(hospital.getEmail());
             }
         });
@@ -153,6 +154,7 @@ public class ManageHospitalController implements Initializable {
     public void btnAddOnAc(ActionEvent event) {
 
         btnDel.setDisable(true);
+        btnSave.setText("Save");
         reset();
 
         try {
@@ -240,6 +242,7 @@ public class ManageHospitalController implements Initializable {
                 }
                 else {
                     new Alert(Alert.AlertType.INFORMATION,"Record Added Successfully").show();
+                    listHos.getItems().clear();
                     loadHos();
                 }
 
@@ -268,6 +271,8 @@ public class ManageHospitalController implements Initializable {
                 }
                 else {
                     new Alert(Alert.AlertType.INFORMATION,"Updated Successfully").show();
+                    listHos.getItems().clear();
+                    loadHos();
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -383,6 +388,7 @@ public class ManageHospitalController implements Initializable {
         txtNm.setText("");
         txtId.setText("");
         txtCity.setText("");
+        txtDis.setValue(null);
 
         txtCapa.setPromptText("Capacity");
         txtDire.setPromptText("Director");
