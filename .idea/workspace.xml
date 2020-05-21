@@ -2,86 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ce7deb4-d1bd-4952-9994-16e7f0198b08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6192fd34-70ad-4204-8712-ad9e2e30f643.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/766bdc9e-cee4-400f-b322-c81b062f951b.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBScript/ReadMe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBScript/covid19.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/AppInitializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/asset/global.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/asset/hospital.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/asset/login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/asset/qc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/asset/user.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/DashboardController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/GlobalCOVIDController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/GlobalCOVIDController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/LoginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageHospitalController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageHospitalController$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageHospitalController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageUsersController$1$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageUsersController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageUsersController$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageUsersController$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageUsersController$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageUsersController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/db/DBConnection.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/Director.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/GlobalData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/Head.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/Hospital.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/QuarantineCenter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/WorkPlace.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/libs/fontawesomefx-8.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/libs/jfoenix-1.8.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/libs/mysql-connector-java-8.0.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/util/UserTM.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/view/Dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/view/GlobalCOVID.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/view/Login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/view/ManageHospital.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/view/ManageQuarantineCenters.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/view/ManageUsers.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asset/global.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asset/hospital.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asset/login.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asset/qc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/asset/user.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/GlobalCOVIDController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/ManageHospitalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/ManageQuarantineCentersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/ManageUsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Director.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/GlobalData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Head.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Hospital.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/QuarantineCenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/WorkPlace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/fontawesomefx-8.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/jfoenix-1.8.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/mysql-connector-java-8.0.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/UserTM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/GlobalCOVID.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ManageHospital.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ManageQuarantineCenters.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ManageUsers.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/covid-19-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/covid-19-management-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBScript/covid19.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DBScript/covid19.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,8 +37,12 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DBScript/ReadMe.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/DBScript/covid19.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1895">
+              <caret line="7" column="67" lean-forward="true" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -165,8 +91,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="905" />
     <option name="height" value="735" />
   </component>
@@ -270,16 +196,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\DBScript" />
-      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\src\libs" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\src\view" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="db" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\src\view" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\DBScript" />
+      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,7 +250,8 @@
       <workItem from="1589774087749" duration="34858000" />
       <workItem from="1589859398127" duration="14702000" />
       <workItem from="1589889817624" duration="25490000" />
-      <workItem from="1589951007367" duration="18344000" />
+      <workItem from="1589951007367" duration="20029000" />
+      <workItem from="1590031869902" duration="1848000" />
     </task>
     <task id="LOCAL-00001" summary="2nd msg">
       <created>1588939764445</created>
@@ -333,16 +260,23 @@
       <option name="project" value="LOCAL" />
       <updated>1588939764445</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="My Commit">
+      <created>1589981064314</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589981064314</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134916000" />
+    <option name="totallyTimeSpent" value="138449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20564516" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15322581" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -359,9 +293,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22173275" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.13950074" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.17767988" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.31571218" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.1938326" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -379,7 +313,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2nd msg" />
-    <option name="LAST_COMMIT_MESSAGE" value="2nd msg" />
+    <MESSAGE value="My Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="My Commit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/view/ManageQuarantineCentersController.fxml" />
@@ -460,20 +395,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ManageHospital.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ManageQuarantineCenters.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -483,20 +418,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Dashboard.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
           <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6192fd34-70ad-4204-8712-ad9e2e30f643/console_2.sql">
       <provider selected="true" editor-type-id="text-editor">
@@ -527,12 +462,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/ManageUsers.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="70" column="113" selection-start-line="70" selection-start-column="113" selection-end-line="70" selection-end-column="113" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -621,12 +556,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/GlobalCOVID.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="117" column="106" selection-start-line="117" selection-start-column="106" selection-end-line="117" selection-end-column="106" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/GlobalCOVIDController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -635,11 +570,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBScript/covid19.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBScript/ReadMe.txt">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBScript/covid19.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1895">
+          <caret line="7" column="67" lean-forward="true" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
