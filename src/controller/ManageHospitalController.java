@@ -240,6 +240,7 @@ public class ManageHospitalController implements Initializable {
                 }
                 else {
                     new Alert(Alert.AlertType.INFORMATION,"Record Added Successfully").show();
+                    loadHos();
                 }
 
             } catch (SQLException e) {

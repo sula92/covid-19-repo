@@ -58,6 +58,8 @@ public class ManageQuarantineCentersController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        btnAdd.setText("ADD NEW CENTER");
+
         loadQc();
 
         txtSer.textProperty().addListener(new ChangeListener<String>() {
@@ -142,28 +144,27 @@ public class ManageQuarantineCentersController implements Initializable {
 
         btnDel.setDisable(true);
 
-        reset();
 
         try {
             PreparedStatement pstm= DBConnection.getInstance().getConnection().prepareStatement("select id From qc");
             ResultSet rst=pstm.executeQuery();
             rst.last();
-            String id=rst.getString(1).replace("C","");
+            String id=rst.getString(1).replace("Q","");
             int incId=Integer.parseInt(id)+1;
             String newId;
 
             if(incId<10){
-                newId="C"+"00"+incId;
+                newId="Q"+"00"+incId;
                 txtId.setText(newId);
                 return;
             }
             else if(incId<100 && incId>10){
-                newId="C"+"0"+incId;
+                newId="Q"+"0"+incId;
                 txtId.setText(newId);
                 return;
             }
             else {
-                newId="C"+incId;
+                newId="Q"+incId;
                 txtId.setText(newId);
                 return;
             }
@@ -171,6 +172,8 @@ public class ManageQuarantineCentersController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        reset();
 
     }
 
@@ -226,6 +229,7 @@ public class ManageQuarantineCentersController implements Initializable {
                 }
                 else {
                     new Alert(Alert.AlertType.INFORMATION,"Record Added Successfully").show();
+                    loadQc();
                 }
 
             } catch (SQLException e) {
@@ -353,7 +357,7 @@ public class ManageQuarantineCentersController implements Initializable {
         btnSave.setText("Save");
         txtCapa.setText("");
         txtDire.setText("");
-        txtDireCont.setText("");
+        //txtDireCont.setText("");
         txtHosCont1.setText("");
         txtDireCont.setText("");
         txtEmail.setText("");
