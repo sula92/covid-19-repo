@@ -22,19 +22,19 @@
                <children>
                   <AnchorPane layoutX="9.0" layoutY="24.0" prefHeight="200.0" prefWidth="723.0" style="-fx-background-color: #E6E6E6;">
                      <children>
-                        <JFXTextField fx:id="txtId" layoutX="14.0" layoutY="28.0" prefHeight="29.0" prefWidth="193.0" text="ID" />
-                        <JFXTextField fx:id="txtNm" layoutX="247.0" layoutY="28.0" prefHeight="29.0" prefWidth="462.0" text="Center Name" />
-                        <JFXTextField fx:id="txtCity" layoutX="12.0" layoutY="138.0" prefHeight="29.0" prefWidth="197.0" text="City" />
+                        <JFXTextField fx:id="txtId" layoutX="14.0" layoutY="28.0" prefHeight="29.0" prefWidth="193.0" promptText="ID" />
+                        <JFXTextField fx:id="txtNm" layoutX="247.0" layoutY="28.0" prefHeight="29.0" prefWidth="462.0" promptText="Center Name" />
+                        <JFXTextField fx:id="txtCity" layoutX="12.0" layoutY="138.0" prefHeight="29.0" prefWidth="197.0" promptText="City" />
                         <JFXComboBox fx:id="txtDis" layoutX="229.0" layoutY="137.0" prefHeight="31.0" prefWidth="230.0" promptText="District" />
-                        <JFXTextField fx:id="txtCapa" layoutX="492.0" layoutY="138.0" prefHeight="29.0" prefWidth="217.0" text="Capacity" />
+                        <JFXTextField fx:id="txtCapa" layoutX="492.0" layoutY="138.0" prefHeight="29.0" prefWidth="217.0" promptText="Capacity" />
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutX="11.0" layoutY="291.0" prefHeight="233.0" prefWidth="720.0" style="-fx-background-color: #E6E6E6;">
                      <children>
-                        <JFXTextField fx:id="txtHosCont1" layoutX="7.0" layoutY="169.0" prefHeight="29.0" prefWidth="318.0" text="Center Contact Number-1" />
-                        <JFXTextField fx:id="txtHosCont2" layoutX="360.0" layoutY="169.0" prefHeight="29.0" prefWidth="321.0" text="Center Contact Number-2" />
-                        <JFXTextField fx:id="txtDire" layoutX="8.0" layoutY="51.0" prefHeight="29.0" prefWidth="316.0" text="Head" />
-                        <JFXTextField fx:id="txtDireCont" layoutX="360.0" layoutY="51.0" prefHeight="29.0" prefWidth="354.0" text="Head's Contact No" />
+                        <JFXTextField fx:id="txtHosCont1" layoutX="7.0" layoutY="169.0" prefHeight="29.0" prefWidth="318.0" promptText="Center Contact Number-1" />
+                        <JFXTextField fx:id="txtHosCont2" layoutX="360.0" layoutY="169.0" prefHeight="29.0" prefWidth="321.0" promptText="Center Contact Number-1" />
+                        <JFXTextField fx:id="txtDire" layoutX="8.0" layoutY="51.0" prefHeight="29.0" prefWidth="316.0" promptText="Head" />
+                        <JFXTextField fx:id="txtDireCont" layoutX="360.0" layoutY="51.0" prefHeight="29.0" prefWidth="354.0" promptText="Head's Contact No" />
                      </children>
                   </AnchorPane>
                   <Button fx:id="btnSave" layoutX="199.0" layoutY="574.0" mnemonicParsing="false" onAction="#btnSaveOnAc" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #FF0000;" text="Save" />

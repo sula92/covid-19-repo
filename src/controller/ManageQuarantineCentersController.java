@@ -47,8 +47,7 @@ public class ManageQuarantineCentersController implements Initializable {
     public JFXTextField txtDireCont;
     public JFXTextField txtHosCont1;
     public JFXTextField txtHosCont2;
-    public JFXTextField txtFax;
-    public JFXTextField txtEmail;
+
     public Button btnSave;
     public Button btnDel;
     public FontAwesomeIconView iconHome;
@@ -179,7 +178,7 @@ public class ManageQuarantineCentersController implements Initializable {
 
     public void btnSaveOnAc(ActionEvent event) {
 
-        if(txtDireCont.getText().isEmpty()||txtDire.getText().isEmpty()||txtCity.getText().isEmpty()||txtId.getText().isEmpty()||txtNm.getText().isEmpty()||txtFax.getText().isEmpty()||txtEmail.getText().isEmpty()||txtHosCont1.getText().isEmpty()||txtHosCont2.getText().isEmpty()||txtCapa.getText().isEmpty()){
+        if(txtDireCont.getText().isEmpty()||txtDire.getText().isEmpty()||txtCity.getText().isEmpty()||txtId.getText().isEmpty()||txtNm.getText().isEmpty()||txtHosCont1.getText().isEmpty()||txtHosCont2.getText().isEmpty()||txtCapa.getText().isEmpty()){
             new Alert(Alert.AlertType.ERROR,"Please Make Sure To Fill All The Fields").show();
             return;
         }
@@ -187,13 +186,6 @@ public class ManageQuarantineCentersController implements Initializable {
         String regex = "^(.+)@(.+)$";
         Pattern pattern = Pattern.compile(regex);
 
-        String email=txtEmail.getText();
-        Matcher matcher = pattern.matcher(email);
-
-        if(!matcher.matches()){
-            new Alert(Alert.AlertType.ERROR,"The Email Pattern is Wrong").show();
-            return;
-        }
 
 
         if (!Pattern.matches("[0-9]{10}", txtHosCont1.getText())){
@@ -211,7 +203,7 @@ public class ManageQuarantineCentersController implements Initializable {
 
         if(btnSave.getText().equalsIgnoreCase("save")){
             try {
-                PreparedStatement pstm=DBConnection.getInstance().getConnection().prepareStatement("insert into qc values(?,?,?,?,?,?,?,?,?,)");
+                PreparedStatement pstm=DBConnection.getInstance().getConnection().prepareStatement("insert into qc values(?,?,?,?,?,?,?,?,?)");
                 pstm.setString(1,txtId.getText());
                 pstm.setString(2,txtNm.getText());
                 pstm.setString(3,txtCity.getText());
@@ -360,8 +352,7 @@ public class ManageQuarantineCentersController implements Initializable {
         //txtDireCont.setText("");
         txtHosCont1.setText("");
         txtDireCont.setText("");
-        txtEmail.setText("");
-        txtFax.setText("");
+
         txtHosCont2.setText("");
         txtNm.setText("");
         txtId.setText("");
@@ -372,8 +363,7 @@ public class ManageQuarantineCentersController implements Initializable {
         txtDireCont.setPromptText("Head's Contact");
         txtHosCont1.setPromptText("Center Contact-1");
         txtHosCont2.setPromptText("Center Contact-2");
-        txtEmail.setPromptText("Email");
-        txtFax.setPromptText("Fax");
+
         txtNm.setPromptText("Center Name");
         txtId.setPromptText("Center ID");
         txtCity.setPromptText("City");
