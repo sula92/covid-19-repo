@@ -231,7 +231,7 @@ public class ManageQuarantineCentersController implements Initializable {
         else {
 
             try {
-                PreparedStatement pstm=DBConnection.getInstance().getConnection().prepareStatement("update qc set `name`=?,city=?,district=?,capacity=?,head=?,head_contact_co=?,center_contact1=?,center_contact2=? where id=?");
+                PreparedStatement pstm=DBConnection.getInstance().getConnection().prepareStatement("update qc set `name`=?,city=?,district=?,capacity=?,head=?,head_contact=?,center_contact1=?,center_contact2=? where id=?");
                 pstm.setString(1,txtNm.getText());
                 pstm.setString(2,txtCity.getText());
                 pstm.setString(3,txtDis.getValue().toString());
@@ -247,6 +247,7 @@ public class ManageQuarantineCentersController implements Initializable {
                 }
                 else {
                     new Alert(Alert.AlertType.INFORMATION,"Updated Successfully").show();
+                    loadQc();
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -268,6 +269,7 @@ public class ManageQuarantineCentersController implements Initializable {
             }
             else {
                 new Alert(Alert.AlertType.INFORMATION,"Record Deleted Successfully").show();
+                loadQc();
             }
         } catch (SQLException e) {
             e.printStackTrace();

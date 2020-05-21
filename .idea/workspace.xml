@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8ce7deb4-d1bd-4952-9994-16e7f0198b08" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageHospitalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageHospitalController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/covid-19-management-system/view/ManageQuarantineCenters.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/view/ManageQuarantineCenters.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ManageQuarantineCentersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ManageQuarantineCentersController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -44,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/ManageQuarantineCentersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="205" column="140" selection-start-line="205" selection-start-column="140" selection-end-line="205" selection-end-column="140" />
+            <state relative-caret-position="264">
+              <caret line="271" column="25" selection-start-line="271" selection-start-column="25" selection-end-line="271" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -256,7 +251,7 @@
       <workItem from="1589859398127" duration="14702000" />
       <workItem from="1589889817624" duration="25490000" />
       <workItem from="1589951007367" duration="20029000" />
-      <workItem from="1590031869902" duration="6671000" />
+      <workItem from="1590031869902" duration="8208000" />
     </task>
     <task id="LOCAL-00001" summary="2nd msg">
       <created>1588939764445</created>
@@ -286,11 +281,18 @@
       <option name="project" value="LOCAL" />
       <updated>1590046389430</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="My Commit4">
+      <created>1590048281968</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590048281968</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143272000" />
+    <option name="totallyTimeSpent" value="144809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -305,7 +307,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15124816" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33039647" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -336,7 +338,8 @@
     <MESSAGE value="My Commit" />
     <MESSAGE value="My Commit2" />
     <MESSAGE value="My Commit3" />
-    <option name="LAST_COMMIT_MESSAGE" value="My Commit3" />
+    <MESSAGE value="My Commit4" />
+    <option name="LAST_COMMIT_MESSAGE" value="My Commit4" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/view/ManageQuarantineCentersController.fxml" />
@@ -597,8 +600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ManageQuarantineCentersController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="205" column="140" selection-start-line="205" selection-start-column="140" selection-end-line="205" selection-end-column="140" />
+        <state relative-caret-position="264">
+          <caret line="271" column="25" selection-start-line="271" selection-start-column="25" selection-end-line="271" selection-end-column="25" />
         </state>
       </provider>
     </entry>
