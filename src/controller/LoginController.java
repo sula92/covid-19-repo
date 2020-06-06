@@ -61,7 +61,7 @@ public class LoginController {
 
         switch (role) {
             case "admin":
-                URL url=this.getClass().getResource("/view/Dashboard.fxml");
+                URL url=this.getClass().getResource("/view/Home.fxml");
                 Parent parent= FXMLLoader.load(url);
                 Scene scene=new Scene(parent);
                 Stage stage= (Stage) this.ancLogin.getScene().getWindow();
