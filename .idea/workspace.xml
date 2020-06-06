@@ -2,15 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ce7deb4-d1bd-4952-9994-16e7f0198b08" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBScript/covid19.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/HomeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/PublicController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/AutoRemove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/CovidPositive.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/ExitData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/Patient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/People.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/Quarantined.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/Reference.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/entity/suspected.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/view/Home.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/view/Public.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/PublicController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/AutoRemove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/CovidPositive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/ExitData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/People.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Quarantined.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Reference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/suspected.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Home.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Public.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBScript/covid19.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageHospitalController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageHospitalController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageHospitalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageHospitalController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/covid-19-management-system/controller/ManageQuarantineCentersController$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/LoginController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBScript/covid19.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+            <state relative-caret-position="42">
+              <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -110,6 +127,7 @@
         <option value="$PROJECT_DIR$/src/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/view/Home.fxml" />
         <option value="$PROJECT_DIR$/src/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/DBScript/covid19.sql" />
       </list>
     </option>
   </component>
@@ -196,17 +214,17 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\src\view" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\DBScript" />
+      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system" />
+      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\src\libs" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="db" />
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system" />
-      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\DBScript" />
-      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\src\libs" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IT\DEP5\Covid-19\covid-19-management-system\src\view" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -260,7 +278,7 @@
       <workItem from="1590937911678" duration="1315000" />
       <workItem from="1591081454749" duration="719000" />
       <workItem from="1591341773370" duration="13648000" />
-      <workItem from="1591423648504" duration="1411000" />
+      <workItem from="1591423648504" duration="2042000" />
     </task>
     <task id="LOCAL-00001" summary="2nd msg">
       <created>1588939764445</created>
@@ -318,11 +336,18 @@
       <option name="project" value="LOCAL" />
       <updated>1590051984842</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="My Commit8">
+      <created>1591426552133</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591426552133</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176653000" />
+    <option name="totallyTimeSpent" value="177284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -344,7 +369,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5330396" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.17033774" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.31571218" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.1938326" />
@@ -371,7 +396,8 @@
     <MESSAGE value="My Commit5" />
     <MESSAGE value="My Commit6" />
     <MESSAGE value="My Commit7" />
-    <option name="LAST_COMMIT_MESSAGE" value="My Commit7" />
+    <MESSAGE value="My Commit8" />
+    <option name="LAST_COMMIT_MESSAGE" value="My Commit8" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/view/ManageQuarantineCentersController.fxml" />
@@ -845,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBScript/covid19.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
+        <state relative-caret-position="42">
+          <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
         </state>
       </provider>
     </entry>

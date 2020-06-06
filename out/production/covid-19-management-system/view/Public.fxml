@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="ancPub" prefHeight="660.0" prefWidth="915.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PublicController">
+   <children>
+      <FontAwesomeIconView fill="#f8f5f5" glyphName="CIRCLE_THIN" layoutX="109.0" layoutY="423.0" onMouseEntered="#onEnter" onMouseExited="#onExit" size="320" />
+      <FontAwesomeIconView fill="#f8f5f5" glyphName="CIRCLE_THIN" layoutX="569.0" layoutY="414.0" onMouseEntered="#onEnter" onMouseExited="#onExit" size="320" />
+      <FontAwesomeIconView fill="#f8f6f6" glyphName="AMBULANCE" layoutX="153.0" layoutY="365.0" size="160" />
+      <FontAwesomeIconView fill="#fcfafa" glyphName="STREET_VIEW" layoutX="646.0" layoutY="356.0" size="160" />
+      <Label layoutX="144.0" layoutY="488.0" prefHeight="40.0" prefWidth="220.0" text="Manage Patients" textFill="#f5f5f5">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="603.0" layoutY="490.0" prefHeight="36.0" prefWidth="261.0" text="Manage Quarantined " textFill="#f8f6f6">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
