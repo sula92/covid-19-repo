@@ -284,6 +284,11 @@ public class ReferenceController implements Initializable {
             return;
         }
 
+        if(ViewListRef.getSelectionModel().getSelectedItems().isEmpty()){
+            new Alert(Alert.AlertType.ERROR,"Please Select a Reference").show();
+            return;
+        }
+
 
         java.sql.Date date= java.sql.Date.valueOf(dateDate.getValue());
         String reason=txtReas.getText();
