@@ -2,7 +2,7 @@ package entity;
 
 import java.sql.Date;
 
-public class Patient {
+public class Patient extends People {
 
     private String id;
     private Hospital hospital;

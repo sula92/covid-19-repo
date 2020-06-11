@@ -61,32 +61,35 @@ public class LoginController {
 
         switch (role) {
             case "admin":
-                URL url=this.getClass().getResource("/view/Home.fxml");
+                URL url=this.getClass().getResource("/view/Dashboard.fxml");
                 Parent parent= FXMLLoader.load(url);
                 Scene scene=new Scene(parent);
                 Stage stage= (Stage) this.ancLogin.getScene().getWindow();
                 stage.setScene(scene);
                 stage.setTitle("Admin");
-                stage.setFullScreen(false);
+                stage.centerOnScreen();
+                stage.show();
                 break;
 
             case "Hospital-IT":
-                URL url2=this.getClass().getResource("/view/ManageHospital.fxml");
+                URL url2=this.getClass().getResource("/view/Patient.fxml");
                 Parent parent2= FXMLLoader.load(url2);
                 Scene scene2=new Scene(parent2);
                 Stage stage2= (Stage) this.ancLogin.getScene().getWindow();
                 stage2.setScene(scene2);
                 stage2.setTitle("Hospital-IT");
-                stage2.setFullScreen(false);
+                stage2.centerOnScreen();
+                stage2.show();
                 break;
             case "Quarantine_Center_IT":
-                URL url3=this.getClass().getResource("/view/ManageQuarantineCenters.fxml");
+                URL url3=this.getClass().getResource("/view/Quarantined.fxml");
                 Parent parent3= FXMLLoader.load(url3);
                 Scene scene3=new Scene(parent3);
                 Stage stage3= (Stage) this.ancLogin.getScene().getWindow();
                 stage3.setScene(scene3);
                 stage3.setTitle("Quarantine_Center-IT");
-                stage3.setFullScreen(false);
+                stage3.centerOnScreen();
+                stage3.show();
                 break;
             case "PSTF":
                 URL url4=this.getClass().getResource("/view/Dashboard.fxml");
@@ -95,7 +98,8 @@ public class LoginController {
                 Stage stage4= (Stage) this.ancLogin.getScene().getWindow();
                 stage4.setScene(scene4);
                 stage4.setTitle("PSTF");
-                stage4.setFullScreen(false);
+                stage4.centerOnScreen();
+                stage4.show();
                 break;
 
         }

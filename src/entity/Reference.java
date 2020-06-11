@@ -1,6 +1,6 @@
 package entity;
 
-public class Reference {
+public class Reference extends People {
 
     private String suspected_id;
     private String reference_id;

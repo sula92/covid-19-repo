@@ -2,7 +2,7 @@ package entity;
 
 import java.sql.Date;
 
-public class suspected {
+public class suspected extends People {
 
     private String id;
     private String reason;

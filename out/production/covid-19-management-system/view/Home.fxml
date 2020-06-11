@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="ancHome" prefHeight="700.0" prefWidth="1002.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
    <children>
       <FontAwesomeIconView fx:id="iconSys" fill="#f8f6f6" glyphName="LAPTOP" layoutX="235.0" layoutY="388.0" onMouseClicked="#iconSysOnClick" size="180" text="" />
@@ -26,6 +25,6 @@
          </font>
       </Label>
       <FontAwesomeIconView fill="#72b0bf" glyphName="CIRCLE_THIN" layoutX="174.0" layoutY="452.0" onMouseClicked="#iconSysOnClick" onMouseEntered="#onEnter" onMouseExited="#onExit" size="350" />
-      <FontAwesomeIconView fill="#68c8d7" glyphName="CIRCLE_THIN" layoutX="605.0" layoutY="429.0" onMouseClicked="#iconPubonClick" onMouseEntered="#onEnter" onMouseExited="#onExit" size="350" text="" />
+      <FontAwesomeIconView fill="#68c8d7" glyphName="CIRCLE_THIN" layoutX="605.0" layoutY="429.0" onMouseEntered="#onEnter" onMouseExited="#onExit" size="350" text="" />
    </children>
 </AnchorPane>

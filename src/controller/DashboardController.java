@@ -25,6 +25,10 @@ public class DashboardController {
     public ImageView imgViewQuarantine;
     public ImageView imgViewUser;
     public Label lblDescription;
+    public ImageView imgViewPatient;
+    public ImageView imgViewQuarantined;
+    public ImageView imgViewRefs;
+    public ImageView imgViewLocalCovid;
 
     public void initialize(){
         DropShadow glow = new DropShadow();
@@ -67,6 +71,19 @@ public class DashboardController {
                     break;
                 case "imgViewQuarantine":
                     root = FXMLLoader.load(this.getClass().getResource("/view/ManageQuarantineCenters.fxml"));
+                    break;
+
+                case "imgViewPatient":
+                    root = FXMLLoader.load(this.getClass().getResource("/view/Patient.fxml"));
+                    break;
+                case "imgViewQuarantined":
+                    root = FXMLLoader.load(this.getClass().getResource("/view/Quarantined.fxml"));
+                    break;
+                case "imgViewRefs":
+                    root = FXMLLoader.load(this.getClass().getResource("/view/Refence.fxml"));
+                    break;
+                case "imgViewLocalCovid":
+                    root = FXMLLoader.load(this.getClass().getResource("/view/LocalCovid.fxml"));
                     break;
                 case "imgViewUser":
 
@@ -132,6 +149,11 @@ public class DashboardController {
             case "imgViewUser":
 
                 this.lblDescription.setText("Click to Manage Users");
+                break;
+
+            case "imgViewPatient":
+
+                this.lblDescription.setText("Click to Manage Patients");
                 break;
 
         }

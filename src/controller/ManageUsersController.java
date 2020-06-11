@@ -211,12 +211,12 @@ public class ManageUsersController implements Initializable {
                 Button button=new Button("Delete");
                 button.setStyle("-fx-background-color: red");
 
-                String x=rst.getString(4);
-                String y=rst.getString(1);
-                String z=rst.getString(6);
+                String x=rst.getString(6);
+                String y=rst.getString(2);
+                String z=rst.getString(7);
 
-                userTMS.add(new UserTM(rst.getString(4),rst.getString(1),rst.getString(6),button));
-                tblUser.getItems().add(new UserTM(rst.getString(4),rst.getString(1),rst.getString(6),button));
+                userTMS.add(new UserTM(rst.getString(6),rst.getString(2),rst.getString(7),button));
+                tblUser.getItems().add(new UserTM(rst.getString(6),rst.getString(2),rst.getString(7),button));
 
                 button.setOnAction(new EventHandler<ActionEvent>() {
                     @Override

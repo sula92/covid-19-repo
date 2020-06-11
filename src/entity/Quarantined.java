@@ -2,7 +2,7 @@ package entity;
 
 import java.sql.Date;
 
-public class Quarantined {
+public class Quarantined extends People {
 
     private String id;
     private String reason;
