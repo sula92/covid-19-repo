@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `auto_remove`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `auto_remove` (
   `id` varchar(20) NOT NULL,
-  `date` int(11) NOT NULL,
+  `date` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `auto_remove_ibfk_1` FOREIGN KEY (`id`) REFERENCES `suspected` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -36,7 +36,34 @@ CREATE TABLE `auto_remove` (
 
 LOCK TABLES `auto_remove` WRITE;
 /*!40000 ALTER TABLE `auto_remove` DISABLE KEYS */;
+INSERT INTO `auto_remove` VALUES ('005','2020-06-11');
 /*!40000 ALTER TABLE `auto_remove` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `center_exit`
+--
+
+DROP TABLE IF EXISTS `center_exit`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `center_exit` (
+  `quarantined_id` varchar(20) NOT NULL,
+  `center_id` varchar(20) NOT NULL,
+  PRIMARY KEY (`quarantined_id`,`center_id`),
+  KEY `FK_Center` (`center_id`),
+  CONSTRAINT `FK_Center` FOREIGN KEY (`center_id`) REFERENCES `qc` (`id`),
+  CONSTRAINT `FK_Exit2` FOREIGN KEY (`quarantined_id`) REFERENCES `exit_data` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `center_exit`
+--
+
+LOCK TABLES `center_exit` WRITE;
+/*!40000 ALTER TABLE `center_exit` DISABLE KEYS */;
+/*!40000 ALTER TABLE `center_exit` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -61,6 +88,7 @@ CREATE TABLE `covid_positive` (
 
 LOCK TABLES `covid_positive` WRITE;
 /*!40000 ALTER TABLE `covid_positive` DISABLE KEYS */;
+INSERT INTO `covid_positive` VALUES ('003','2020-06-10','H001');
 /*!40000 ALTER TABLE `covid_positive` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -78,12 +106,7 @@ CREATE TABLE `exit_data` (
   `to_` varchar(50) NOT NULL,
   `location` varchar(50) NOT NULL,
   `date` date NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `exit_data_ibfk_2` (`from_`),
-  CONSTRAINT `exit_data_ibfk_1` FOREIGN KEY (`from_`) REFERENCES `qc` (`id`),
-  CONSTRAINT `exit_data_ibfk_2` FOREIGN KEY (`from_`) REFERENCES `hospital` (`id`),
-  CONSTRAINT `exit_data_ibfk_3` FOREIGN KEY (`id`) REFERENCES `quarantined` (`id`),
-  CONSTRAINT `exit_data_ibfk_4` FOREIGN KEY (`id`) REFERENCES `patient` (`id`)
+  PRIMARY KEY (`id`,`from_`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -93,6 +116,7 @@ CREATE TABLE `exit_data` (
 
 LOCK TABLES `exit_data` WRITE;
 /*!40000 ALTER TABLE `exit_data` DISABLE KEYS */;
+INSERT INTO `exit_data` VALUES ('003','DISCHARGED','H001','uuu','Hostpital','2020-06-04'),('004','TRANSFERRED','Q001','H001','Quarantined Center','2020-06-10'),('007','DEAD ','H001','Kanaththa','Hostpital','2020-06-11');
 /*!40000 ALTER TABLE `exit_data` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -156,6 +180,33 @@ INSERT INTO `hospital` VALUES ('H001','Gampaha','Gampaha','Gampaha','2000','sula
 UNLOCK TABLES;
 
 --
+-- Table structure for table `hospital_exit`
+--
+
+DROP TABLE IF EXISTS `hospital_exit`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `hospital_exit` (
+  `patient_id` varchar(20) NOT NULL,
+  `hospital_id` varchar(20) NOT NULL,
+  PRIMARY KEY (`patient_id`,`hospital_id`),
+  KEY `FK_Hospital` (`hospital_id`),
+  CONSTRAINT `FK_Exit` FOREIGN KEY (`patient_id`) REFERENCES `exit_data` (`id`),
+  CONSTRAINT `FK_Hospital` FOREIGN KEY (`hospital_id`) REFERENCES `hospital` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `hospital_exit`
+--
+
+LOCK TABLES `hospital_exit` WRITE;
+/*!40000 ALTER TABLE `hospital_exit` DISABLE KEYS */;
+INSERT INTO `hospital_exit` VALUES ('003','H001');
+/*!40000 ALTER TABLE `hospital_exit` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `patient`
 --
 
@@ -167,10 +218,10 @@ CREATE TABLE `patient` (
   `hospital` varchar(60) NOT NULL,
   `date` date NOT NULL,
   `reason` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id`,`hospital`),
   KEY `hospital` (`hospital`),
-  CONSTRAINT `patient_ibfk_1` FOREIGN KEY (`id`) REFERENCES `people` (`id`),
-  CONSTRAINT `patient_ibfk_2` FOREIGN KEY (`hospital`) REFERENCES `hospital` (`id`)
+  CONSTRAINT `patient_ibfk_1` FOREIGN KEY (`hospital`) REFERENCES `hospital` (`id`),
+  CONSTRAINT `patient_ibfk_2` FOREIGN KEY (`id`) REFERENCES `people` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -180,7 +231,59 @@ CREATE TABLE `patient` (
 
 LOCK TABLES `patient` WRITE;
 /*!40000 ALTER TABLE `patient` DISABLE KEYS */;
+INSERT INTO `patient` VALUES ('003','H001','2020-06-10',''),('007','H001','2020-06-11','jfjfjf');
 /*!40000 ALTER TABLE `patient` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `patient_exit`
+--
+
+DROP TABLE IF EXISTS `patient_exit`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `patient_exit` (
+  `patient_id` varchar(20) NOT NULL,
+  `hospital_id` varchar(20) NOT NULL,
+  PRIMARY KEY (`patient_id`,`hospital_id`),
+  CONSTRAINT `FK_Exitex` FOREIGN KEY (`patient_id`) REFERENCES `exit_data` (`id`),
+  CONSTRAINT `FK_Patientex` FOREIGN KEY (`patient_id`) REFERENCES `patient` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `patient_exit`
+--
+
+LOCK TABLES `patient_exit` WRITE;
+/*!40000 ALTER TABLE `patient_exit` DISABLE KEYS */;
+/*!40000 ALTER TABLE `patient_exit` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `patient_refs`
+--
+
+DROP TABLE IF EXISTS `patient_refs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `patient_refs` (
+  `suspected_id` varchar(20) NOT NULL,
+  `reference_id` varchar(20) NOT NULL,
+  PRIMARY KEY (`suspected_id`,`reference_id`),
+  KEY `FK_Patient` (`reference_id`),
+  CONSTRAINT `FK_Patient` FOREIGN KEY (`reference_id`) REFERENCES `patient` (`id`),
+  CONSTRAINT `FK_Reference` FOREIGN KEY (`suspected_id`) REFERENCES `reference` (`suspect_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `patient_refs`
+--
+
+LOCK TABLES `patient_refs` WRITE;
+/*!40000 ALTER TABLE `patient_refs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `patient_refs` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -211,6 +314,7 @@ CREATE TABLE `people` (
 
 LOCK TABLES `people` WRITE;
 /*!40000 ALTER TABLE `people` DISABLE KEYS */;
+INSERT INTO `people` VALUES ('003','sula','dissa','','Gampaha',' Gampaha',' Western','921814399v','03384949',' A+'),('004','anil','xxx','','xxx',' Kalutara',' Eastern','899404v','9494040',' A-'),('005','john','doe','xxx','xxx','Colombo','Western','8695959v','858585','A+'),('006','nimal','perera','','kandy',' Kandy',' Central','9595959v','959595',' A+'),('007','ruwan','dias','jsjsksk','asddk',' Colombo',' Southern','9494949v','1234576543',' B+');
 /*!40000 ALTER TABLE `people` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -270,7 +374,59 @@ CREATE TABLE `quarantined` (
 
 LOCK TABLES `quarantined` WRITE;
 /*!40000 ALTER TABLE `quarantined` DISABLE KEYS */;
+INSERT INTO `quarantined` VALUES ('004','fffffdsa','2020-06-03','Q001');
 /*!40000 ALTER TABLE `quarantined` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `quarantined_exit`
+--
+
+DROP TABLE IF EXISTS `quarantined_exit`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `quarantined_exit` (
+  `quarantined_id` varchar(20) NOT NULL,
+  `center_id` varchar(20) NOT NULL,
+  PRIMARY KEY (`quarantined_id`,`center_id`),
+  CONSTRAINT `FK_Exitex2` FOREIGN KEY (`quarantined_id`) REFERENCES `exit_data` (`id`),
+  CONSTRAINT `FK_Quarantinedex` FOREIGN KEY (`quarantined_id`) REFERENCES `quarantined` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `quarantined_exit`
+--
+
+LOCK TABLES `quarantined_exit` WRITE;
+/*!40000 ALTER TABLE `quarantined_exit` DISABLE KEYS */;
+/*!40000 ALTER TABLE `quarantined_exit` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `quarantined_refs`
+--
+
+DROP TABLE IF EXISTS `quarantined_refs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `quarantined_refs` (
+  `suspected_id` varchar(20) NOT NULL,
+  `reference_id` varchar(20) NOT NULL,
+  PRIMARY KEY (`suspected_id`,`reference_id`),
+  KEY `FK_Quaran` (`reference_id`),
+  CONSTRAINT `FK_Quaran` FOREIGN KEY (`reference_id`) REFERENCES `quarantined` (`id`),
+  CONSTRAINT `FK_Ref` FOREIGN KEY (`suspected_id`) REFERENCES `reference` (`suspect_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `quarantined_refs`
+--
+
+LOCK TABLES `quarantined_refs` WRITE;
+/*!40000 ALTER TABLE `quarantined_refs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `quarantined_refs` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -284,11 +440,10 @@ CREATE TABLE `reference` (
   `suspect_id` varchar(20) NOT NULL,
   `reference_id` varchar(20) NOT NULL,
   `connection` varchar(300) NOT NULL,
-  PRIMARY KEY (`reference_id`) USING BTREE,
+  PRIMARY KEY (`suspect_id`,`reference_id`),
   UNIQUE KEY `suspect_id` (`suspect_id`) USING BTREE,
-  CONSTRAINT `reference_ibfk_1` FOREIGN KEY (`reference_id`) REFERENCES `quarantined` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `reference_ibfk_2` FOREIGN KEY (`reference_id`) REFERENCES `people` (`id`),
-  CONSTRAINT `reference_ibfk_3` FOREIGN KEY (`reference_id`) REFERENCES `patient` (`id`)
+  KEY `FK_QuaranRef` (`reference_id`),
+  CONSTRAINT `FK_PeopleRef` FOREIGN KEY (`suspect_id`) REFERENCES `people` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -298,6 +453,7 @@ CREATE TABLE `reference` (
 
 LOCK TABLES `reference` WRITE;
 /*!40000 ALTER TABLE `reference` DISABLE KEYS */;
+INSERT INTO `reference` VALUES ('005','003','friend'),('006','004','friend');
 /*!40000 ALTER TABLE `reference` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -324,6 +480,7 @@ CREATE TABLE `suspected` (
 
 LOCK TABLES `suspected` WRITE;
 /*!40000 ALTER TABLE `suspected` DISABLE KEYS */;
+INSERT INTO `suspected` VALUES ('005','reason','1980-12-17'),('006','hachin yanawa','2020-06-03');
 /*!40000 ALTER TABLE `suspected` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -375,4 +532,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-06 12:21:36
+-- Dump completed on 2020-06-11 17:10:26

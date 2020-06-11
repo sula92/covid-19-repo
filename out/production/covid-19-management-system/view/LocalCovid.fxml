@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancGlobal" prefHeight="963.0" prefWidth="1155.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LocalCOVIDController">
+   <children>
+      <Label layoutX="424.0" layoutY="7.0" prefHeight="71.0" prefWidth="284.0" text="LOCAL COVID 19">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="pie" layoutX="19.0" layoutY="344.0" prefHeight="375.0" prefWidth="559.0" />
+      <AnchorPane layoutX="19.0" layoutY="88.0" prefHeight="236.0" prefWidth="1117.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="58.0" layoutY="25.0" prefHeight="34.0" prefWidth="136.0" text="Last Updated" textFill="#f8f7f7">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="labDate" layoutX="64.0" layoutY="129.0" prefHeight="27.0" prefWidth="124.0" text="date" textFill="#fcf9f9">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="305.0" layoutY="25.0" text="Confirmed Cases" textFill="#fffefe">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="labCon" layoutX="372.0" layoutY="129.0" text="case" textFill="#f8f5f5">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="614.0" layoutY="23.0" prefHeight="39.0" prefWidth="136.0" text="Recovered" textFill="#fcf9f9">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="labRec" layoutX="656.0" layoutY="129.0" text="rec" textFill="#fcfafa">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="941.0" layoutY="21.0" text="Deaths" textFill="#f8f5f5">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="labDeath" layoutX="962.0" layoutY="135.0" prefHeight="27.0" prefWidth="52.0" text="death" textFill="#fcfafa">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="569.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: blue;">
+               <children>
+                  <FontAwesomeIconView fill="#eeeaea" glyphName="THUMBS_UP" layoutX="81.0" layoutY="94.0" size="40" text="" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="888.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: blue;">
+               <children>
+                  <FontAwesomeIconView fill="#fffdfd" glyphName="THUMBS_DOWN" layoutX="81.0" layoutY="93.0" size="40" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="299.0" layoutY="11.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: blue;">
+               <children>
+                  <FontAwesomeIconView fill="#fcfafa" glyphName="USER_MD" layoutX="74.0" layoutY="93.0" size="40" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="32.0" layoutY="18.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: blue;">
+               <children>
+                  <FontAwesomeIconView fill="#fcfafa" glyphName="CALENDAR" layoutX="79.0" layoutY="85.0" size="40" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <FontAwesomeIconView fx:id="iconHome" glyphName="HOME" layoutX="1025.0" layoutY="63.0" onMouseClicked="#iconHomeOnClicked" size="60" />
+      <AnchorPane layoutX="-4.0" layoutY="851.0" prefHeight="113.0" prefWidth="1155.0" style="-fx-background-color: black;" />
+      <Pane fx:id="paneView" layoutX="589.0" layoutY="344.0" prefHeight="375.0" prefWidth="551.0" />
+      <Button fx:id="btnReset" layoutX="19.0" layoutY="34.0" mnemonicParsing="false" onAction="#btnResetOnAction" prefHeight="31.0" prefWidth="233.0" style="-fx-background-color: blue;" text="RESET" textFill="#eee9e9">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

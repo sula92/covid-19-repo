@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancPatient" prefHeight="1021.0" prefWidth="1909.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PatientController">
+   <children>
+      <JFXTextField fx:id="txtId" layoutX="126.0" layoutY="83.0" prefHeight="29.0" prefWidth="247.0" promptText="ID" />
+      <JFXTextField fx:id="txtFnm" layoutX="458.0" layoutY="83.0" prefHeight="29.0" prefWidth="359.0" promptText="FirstName" />
+      <JFXTextField fx:id="txtLnm" layoutX="887.0" layoutY="83.0" prefHeight="29.0" prefWidth="400.0" promptText="LastName" />
+      <TextArea fx:id="txtAdd" layoutX="116.0" layoutY="151.0" prefHeight="160.0" prefWidth="475.0" promptText="Address" />
+      <JFXTextField fx:id="txtCity" layoutX="645.0" layoutY="167.0" prefHeight="29.0" prefWidth="271.0" promptText="City" />
+      <JFXComboBox fx:id="txtProvince" layoutX="637.0" layoutY="246.0" prefHeight="31.0" prefWidth="286.0" promptText="Province" />
+      <JFXTextField fx:id="txtNic" layoutX="984.0" layoutY="247.0" prefHeight="29.0" prefWidth="295.0" promptText="NIC" />
+      <JFXTextField fx:id="txtContact" layoutX="126.0" layoutY="342.0" promptText="Contact Number" />
+      <JFXComboBox fx:id="cmbBlood" layoutX="376.0" layoutY="340.0" prefHeight="31.0" prefWidth="207.0" promptText="Blood Group" />
+      <JFXDatePicker fx:id="dateDate" layoutX="376.0" layoutY="435.0" prefHeight="29.0" prefWidth="223.0" promptText="Date" />
+      <TextArea fx:id="txtReason" layoutX="631.0" layoutY="314.0" prefHeight="168.0" prefWidth="413.0" promptText="Reason" />
+      <TableView fx:id="tblPatient" layoutX="116.0" layoutY="638.0" prefHeight="354.0" prefWidth="1175.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="94.99996948242188" text="ID" />
+          <TableColumn fx:id="colNm" prefWidth="145.00003051757812" text="NAME" />
+            <TableColumn fx:id="colCity" prefWidth="99.0" text="CITY" />
+            <TableColumn fx:id="colDistrict" prefWidth="103.0" text="DISTRICT" />
+            <TableColumn fx:id="colHos" prefWidth="139.0" text="HOSPITAL" />
+            <TableColumn fx:id="colProvince" prefWidth="130.0" text="PROVINCE" />
+            <TableColumn fx:id="colNIC" prefWidth="121.0" text="NIC" />
+            <TableColumn fx:id="colDate" prefWidth="150.0" text="DATE" />
+            <TableColumn fx:id="colRef" prefWidth="100.0" text="REFERENCES" />
+            <TableColumn fx:id="colDel" minWidth="0.0" prefWidth="93.0" text="DELETE" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnSave" layoutX="554.0" layoutY="528.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="315.0" style="-fx-background-color: red;" text="SAVE" textFill="#fffefe" />
+      <JFXTextField fx:id="txtSearch" layoutX="119.0" layoutY="588.0" prefHeight="29.0" prefWidth="1168.0" promptText="SEARCH" />
+      <FontAwesomeIconView fx:id="iconHome" glyphName="HOME" layoutX="1232.0" layoutY="66.0" onMouseClicked="#iconHome" size="60" text="" />
+      <Button fx:id="btnClear" layoutX="955.0" layoutY="528.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="271.0" style="-fx-background-color: blue;" text="RESET" textFill="#fffbfb" />
+      <Button fx:id="btnAdd" layoutX="168.0" layoutY="528.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="31.0" prefWidth="286.0" style="-fx-background-color: blue;" text="ADD NEW+" textFill="#f8f5f5" />
+      <ComboBox fx:id="cmbDistricts" layoutX="974.0" layoutY="166.0" prefHeight="31.0" prefWidth="286.0" promptText="Districts" />
+      <ComboBox fx:id="cmbhospitals" layoutX="116.0" layoutY="435.0" prefHeight="31.0" prefWidth="182.0" promptText="Hospitals" />
+      <Label layoutX="582.0" layoutY="14.0" prefHeight="21.0" prefWidth="286.0" text="MANAGE PATIENTS">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="1345.0" prefHeight="1021.0" prefWidth="565.0" style="-fx-background-color: black;">
+         <children>
+            <ComboBox fx:id="cmbReason" layoutX="164.0" layoutY="134.0" prefHeight="31.0" prefWidth="304.0" promptText="Reason" />
+            <JFXTextField fx:id="txtTo" layoutX="169.0" layoutY="227.0" prefHeight="29.0" prefWidth="295.0" promptText="TO" style="-fx-background-color: white;" />
+            <JFXDatePicker fx:id="dateExitDate" layoutX="174.0" layoutY="329.0" prefHeight="29.0" prefWidth="286.0" promptText="Exit Date" />
+            <Button fx:id="btnExit" layoutX="225.0" layoutY="418.0" mnemonicParsing="false" onAction="#btnExitOnActio" prefHeight="31.0" prefWidth="158.0" style="-fx-background-color: blue;" text="Exit" textFill="#f8f6f6" />
+            <Label layoutX="240.0" layoutY="28.0" text="EXIT FORM" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblExit" layoutX="109.0" layoutY="633.0" prefHeight="354.0" prefWidth="390.0">
+              <columns>
+                <TableColumn fx:id="colPersonId" prefWidth="111.0" text="PERSON ID" />
+                <TableColumn fx:id="colExitDate" prefWidth="164.0" text="EXIT DATE" />
+                  <TableColumn fx:id="colHosExit" prefWidth="114.0" text="Hospital" />
+              </columns>
+            </TableView>
+            <JFXTextField fx:id="txtSearchExit" layoutX="109.0" layoutY="545.0" prefHeight="29.0" prefWidth="390.0" promptText="SEARCH EXIT">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnCovid" layoutX="1057.0" layoutY="322.0" mnemonicParsing="false" onAction="#btnCovidOnAction" prefHeight="153.0" prefWidth="169.0" style="-fx-background-color: red;" text="MARKED AS COVID+" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
